@@ -1,0 +1,50 @@
+.guessed-words-container {
+  width: 100vw;
+}
+.notebook-paper {
+  width: 960px;
+  background: rgb(255, 255, 202);
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 5px;
+  @media (max-width: 800px) {
+    width: 70vw;
+  }
+  header {
+    width: 100%;
+    .title-jotto {
+      width: 210px;
+      margin: 0 auto;
+      font-size: 30px;
+      color: cornflowerblue;
+      border-bottom: 2px solid black;
+    }
+  }
+
+  .content-row-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.title-row {
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 800px) {
+    font-size: 10px;
+  }
+}
+.content-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-bottom: 2px dotted rgb(0, 106, 255);
+  letter-spacing: 2px;
+  font-weight: 200;
+  align-items: center;
+}
