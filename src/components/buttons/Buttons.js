@@ -37,8 +37,8 @@ const Buttons = () => {
       : color === "green"
       ? "red"
       : color === "red"
-      ? "gray"
-      : color === "gray"
+      ? "yellow"
+      : color === "yellow"
       ? "white"
       : "white";
   const success = useSelector((state) => state.success);

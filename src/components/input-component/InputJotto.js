@@ -5,7 +5,6 @@ import "./InputJotto.scss";
 import { guessWord } from "../../redux/actions";
 const InputJotto = ({ secretWord }) => {
   const [currentGuess, setCurrentGuess] = React.useState("");
-  const [error, setError] = React.useState(false);
   const dispatch = useDispatch();
   const success = useSelector((state) => state.success);
 
@@ -30,13 +29,9 @@ const InputJotto = ({ secretWord }) => {
           value={currentGuess}
           onChange={(event) => setCurrentGuess(event.target.value)}
           minLength={5}
-          maxLength={5}
           required
         />
-        <button
-          data-test='submit-button'
-          className='input-button-jotto'
-          type='submit'>
+        <button className='input-button-jotto' type='submit'>
           Submit
         </button>
       </form>
