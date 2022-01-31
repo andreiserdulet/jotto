@@ -29,6 +29,7 @@ const InputJotto = ({ secretWord }) => {
           value={currentGuess}
           onChange={(event) => setCurrentGuess(event.target.value)}
           minLength={5}
+          maxLength={5}
           required
         />
         <button className='input-button-jotto' type='submit'>
