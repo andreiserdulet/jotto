@@ -3,9 +3,9 @@
 }
 .notebook-paper {
   width: 960px;
-  background: rgb(255, 255, 202);
   margin: 50px auto;
   padding: 50px;
+  background: rgb(255, 255, 202);
   border-radius: 5px;
   @media (max-width: 800px) {
     width: 70vw;
@@ -29,11 +29,11 @@
   }
 }
 .title-row {
-  margin: 0 auto;
-  border-bottom: 2px solid black;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
   @media (max-width: 800px) {
     font-size: 10px;
   }

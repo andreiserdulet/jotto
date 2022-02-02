@@ -1,22 +1,26 @@
 import React from "react";
 
 const Letter = ({ letter }) => {
-  const [color, setColor] = React.useState("white");
-  const newButtonColor =
-    color === "white"
-      ? "green"
-      : color === "green"
-      ? "red"
-      : color === "red"
-      ? "yellow"
-      : color === "yellow"
-      ? "white"
-      : "white";
+  const [backgroundColor, setBackgroundColor] = React.useState("white");
+  const newButtonColor = (color) => {
+    switch (color) {
+      case "white":
+        return "yellow";
+      case "yellow":
+        return "lime";
+      case "lime":
+        return "red";
+      case "red":
+        return "white";
+    }
+  };
+
   return (
     <button
-      style={{ background: `${color}` }}
+      style={{ background: `${backgroundColor}` }}
+      className='button-colors'
       onClick={() => {
-        setColor(newButtonColor);
+        setBackgroundColor(newButtonColor(backgroundColor));
       }}>
       {letter}
     </button>

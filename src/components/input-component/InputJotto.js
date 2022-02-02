@@ -6,11 +6,6 @@ import { guessWord } from "../../redux/actions";
 const InputJotto = ({ secretWord }) => {
   const [currentGuess, setCurrentGuess] = React.useState("");
   const dispatch = useDispatch();
-  const success = useSelector((state) => state.success);
-
-  if (success) {
-    return <div data-test='component-input' />;
-  }
 
   return (
     <div data-test='component-input'>
