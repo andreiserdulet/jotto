@@ -2,16 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./GuessedWords.scss";
 import Buttons from "../buttons/Buttons";
+import Button from "../_special-button/Button";
 const GuessedWords = ({ guessedWords }) => {
   let contents;
   if (guessedWords.length === 0) {
     contents = (
-      <span data-test='guess-instructions'>Try to guess the secret word!</span>
+      <p data-test='guess-instructions'>Try to guess the secret word!</p>
     );
   } else {
     contents = (
       <div className='guessed-words-container'>
         <Buttons />
+        <Button />
         <div data-test='guessed-words' className='notebook-paper'>
           <header>
             <h1 className='title-jotto'>Guessed Words</h1>
@@ -24,7 +26,7 @@ const GuessedWords = ({ guessedWords }) => {
             </div>
             <div className='content-row-container'>
               {guessedWords.map((word, index) => {
-                const {guessedWord, letterMatchCount} = word;
+                const { guessedWord, letterMatchCount } = word;
                 return (
                   <div
                     data-test='guessed-word'

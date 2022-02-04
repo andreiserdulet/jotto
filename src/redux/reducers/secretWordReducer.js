@@ -27,9 +27,8 @@ const testWords2 = testWords.filter((item) => {
     return item;
   }
 });
-
+console.log(testWords2);
 const words = testWords2[Math.floor(Math.random() * testWords2.length)];
-
 
 export default (state = words, action) => {
   switch (action.type) {

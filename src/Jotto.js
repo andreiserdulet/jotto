@@ -10,7 +10,8 @@ const Jotto = () => {
   const secretWord = useSelector((state) => state.secretWord);
   useEffect(() => {
     console.log(secretWord);
-  }, [secretWord]);
+    console.log(store.getState());
+  }, []);
 
   return (
     <div data-test='component-app' className='container'>
