@@ -15,9 +15,7 @@ const Button = () => {
         }}
       />
       {showSecretWord && (
-        <marquee>
-          Special thanks to my collegue, Maria! The secret word is: {secretWord}
-        </marquee>
+        <marquee>Ok... The secret word is: {secretWord}</marquee>
       )}
     </div>
   );

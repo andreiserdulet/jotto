@@ -16,14 +16,16 @@ const Letter = ({ letter }) => {
   };
 
   return (
-    <button
-      style={{ background: `${backgroundColor}` }}
-      className='button-colors'
-      onClick={() => {
-        setBackgroundColor(newButtonColor(backgroundColor));
-      }}>
-      {letter}
-    </button>
+    <>
+      <button
+        style={{ background: `${backgroundColor}` }}
+        className='button-colors'
+        onClick={() => {
+          setBackgroundColor(newButtonColor(backgroundColor));
+        }}>
+        {letter}
+      </button>
+    </>
   );
 };
 export default Letter;

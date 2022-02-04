@@ -1,12 +1,24 @@
-.congrats-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .congrats-text{
-        font-size: 25px;
-        letter-spacing: 2px;
-        color:cornflowerblue;
-    }
-  
+.congrats-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .congrats-text {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: cornflowerblue;
+  }
+}
+.reset-button {
+  margin-top: 20px;
+  font-size: 25px;
+  transition: 1s ease;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  &:hover {
+    background: cornflowerblue;
+    color: white;
+  }
 }
