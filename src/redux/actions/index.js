@@ -1,5 +1,4 @@
 import { getLetterMatchCount } from "../../helpers";
-import wordsData from "../../wordsData";
 
 export const actionTypes = {
   CORRECT_GUESS: "CORRECT_GUESS",

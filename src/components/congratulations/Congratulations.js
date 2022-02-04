@@ -14,7 +14,7 @@ const Congratulations = ({ success, secretWord, guessedWords }) => {
           {guessedWords.length} tries!
         </span>
         <button
-        className="reset-button"
+          className='reset-button'
           onClick={() => {
             const testWords = wordsData.filter((item) => item.length === 5);
             const testWords2 = testWords.filter((item) => {
@@ -30,6 +30,7 @@ const Congratulations = ({ success, secretWord, guessedWords }) => {
             });
             const words =
               testWords2[Math.floor(Math.random() * testWords2.length)];
+            window.localStorage.clear();
             dispatch(resetGame(words));
           }}>
           reset game
