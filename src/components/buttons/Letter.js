@@ -2,7 +2,7 @@ import React from "react";
 
 const Letter = ({ letter }) => {
   const [backgroundColor, setBackgroundColor] = React.useState("white");
-  const newButtonColor = (color) => {
+  const newButtonColor = color => {
     switch (color) {
       case "white":
         return "yellow";

@@ -62,7 +62,7 @@ let letterColor = [
 ];
 
 const Buttons = () => {
-  const success = useSelector((state) => state.success);
+  const success = useSelector(state => state.success);
 
   if (success) {
     return <div></div>;
@@ -72,21 +72,19 @@ const Buttons = () => {
         <div className='buttons-container'>
           {upperCaseAlp.map((item, index) => {
             return (
-              <>
-                <Letter
-                  key={item}
-                  letter={upperCaseAlp[index]}
-                  // id={"letter " + index}
-                  // key={index}
-                  // className='button-colors'
-                  // onClick={() => {
-                  //   // letterColor[index] = changeColor(letterColor[index]);
-                  //   // document.getElementById(
-                  //   //   "letter " + index
-                  //   // ).style.backgroundColor = letterColor[index];
-                  // }}
-                ></Letter>
-              </>
+              <Letter
+                key={item}
+                letter={upperCaseAlp[index]}
+                // id={"letter " + index}
+                // key={index}
+                // className='button-colors'
+                // onClick={() => {
+                //   // letterColor[index] = changeColor(letterColor[index]);
+                //   // document.getElementById(
+                //   //   "letter " + index
+                //   // ).style.backgroundColor = letterColor[index];
+                // }}
+              ></Letter>
             );
           })}
         </div>

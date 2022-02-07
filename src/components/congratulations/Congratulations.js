@@ -6,6 +6,7 @@ import { resetGame } from "../../redux/actions";
 import wordsData from "../../wordsData";
 const Congratulations = ({ success, secretWord, guessedWords }) => {
   const dispatch = useDispatch();
+
   if (success) {
     return (
       <div data-test='component-congrats' className='congrats-container'>
@@ -16,9 +17,9 @@ const Congratulations = ({ success, secretWord, guessedWords }) => {
         <button
           className='reset-button'
           onClick={() => {
-            const testWords = wordsData.filter((item) => item.length === 5);
-            const testWords2 = testWords.filter((item) => {
-              const checkUniqueArray2 = (word) =>
+            const testWords = wordsData.filter(item => item.length === 5);
+            const testWords2 = testWords.filter(item => {
+              const checkUniqueArray2 = word =>
                 [...word].every(
                   (letter, index) => word.indexOf(letter) === index
                 );

@@ -8,9 +8,9 @@ const InputJotto = ({ secretWord }) => {
   const [error, setError] = React.useState(false);
   const success = useSelector(state => state.success);
   const dispatch = useDispatch();
-  let words = require("an-array-of-english-words");
+  const words = require("an-array-of-english-words");
   const checkFunction = (currentGuess, words) => {
-    let check = words.includes(currentGuess);
+    const check = words.includes(currentGuess);
     return check;
   };
   const check = checkFunction(currentGuess, words);
@@ -48,7 +48,11 @@ const InputJotto = ({ secretWord }) => {
               maxLength={5}
               required
             />
-            {error && <p className='input-error'>This word does not exist </p>}
+            {error && (
+              <p className='input-error'>
+                This word {currentGuess} does not exist{" "}
+              </p>
+            )}
             <button className='input-button-jotto' type='submit'>
               Submit
             </button>
