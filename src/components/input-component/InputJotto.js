@@ -10,7 +10,7 @@ const InputJotto = ({ secretWord }) => {
   const dispatch = useDispatch();
   const words = require("an-array-of-english-words");
   const checkFunction = (currentGuess, words) => {
-    const check = words.includes(currentGuess);
+    const check = words.includes(currentGuess.toLowerCase());
     return check;
   };
   const check = checkFunction(currentGuess, words);
