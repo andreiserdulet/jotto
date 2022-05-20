@@ -435,7 +435,6 @@ export default [
   "mark",
   "interest",
   "written",
-  "can't",
   "bed",
   "necessary",
   "age",
