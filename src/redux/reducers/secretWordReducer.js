@@ -28,7 +28,6 @@ const testWords2 = testWords.filter(item => {
   }
 });
 const words = testWords2[Math.floor(Math.random() * testWords2.length)];
-
 export default (state = words, action) => {
   switch (action.type) {
     case actionTypes.SET_SECRET_WORD:

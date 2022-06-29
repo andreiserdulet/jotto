@@ -43,14 +43,19 @@ const InputJotto = ({ secretWord }) => {
               type='text'
               placeholder='enter guess'
               value={currentGuess}
-              onChange={event => setCurrentGuess(event.target.value)}
+              onChange={e => {
+                const onlyLetters = e.target.value.replace(/[^a-zA-Z]/g, "");
+                setCurrentGuess(
+                  Array.from(new Set(onlyLetters.split(""))).join("")
+                );
+              }}
               minLength={5}
               maxLength={5}
               required
             />
             {error && (
               <p className='input-error'>
-                This word {currentGuess} does not exist{" "}
+                This word {currentGuess} is not accepted{" "}
               </p>
             )}
             <button className='input-button-jotto' type='submit'>
