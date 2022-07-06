@@ -10,13 +10,13 @@ const Letter = ({ letter }) => {
         return "lime";
       case "lime":
         return "red";
-      case "cyan":
-        return "cyan";
-      case "orange":
-        return "orange";
-      case "purple":
-        return "purple";
       case "red":
+        return "cyan";
+      case "cyan":
+        return "orange";
+      case "orange":
+        return "purple";
+      case "purple":
         return "white";
     }
   };
